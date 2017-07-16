@@ -1,10 +1,6 @@
 #!/usr/bin/python
-import time
-import psycopg2
-from psycopg2.extras import execute_values
 import argparse
 from functools import reduce
-import pprint
 from random import randint
 from faker import Factory
 
@@ -58,9 +54,7 @@ def main(args):
 
   # search
   query_str = reduce(lambda r, n: n, args.query, "")
-  result = search_util.query(cursor, query_str)
-  print("found %s match" % len(result))
-  pprint.pprint(result)
+  search_util.query(cursor, query_str)
 
 
 # --------------------

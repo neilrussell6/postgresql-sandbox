@@ -6,6 +6,11 @@ Postgres full text search
 
 > Demos that a full text search of 1,000,000 records of indexed Postgres data, only takes around 0.0006 seconds.
 
+ * creates n rows of "post" data, populating title, content columns 
+ * updates 5 random rows with predictable data
+ * indexes title, content columns
+ * searches using provided query
+
 #### Usasge
 
 Running this command:
@@ -18,7 +23,8 @@ Results in output something like this:
 connecting to database
 connected
 
-seeding 1000000 rows of faker data took 297.4872796535492
+seeding 1000000 rows of faker data
+... took 297.4872796535492 seconds
 
 updating with predictable data:
 ("The Fox and the Dog", "The quick brown fox jumps over the lazy dog", 550779)
@@ -28,11 +34,14 @@ updating with predictable data:
 ("Ninja Turtles", "Turtles are not actually very well suited to learning ninjitsu, espeically when taught by a rat.", 741252)
 
 
-indexing 1000000 rows took 59.95078206062317
+indexing 1000000 rows
+... took 59.95078206062317 seconds
 
-search took 0.0006098747253417969
-found 2 match
+
+search query: 'dog'
+found 2 matches
 [(550779, "The Fox and the Dog"), (759940, "Dogs are always up to no good")]
+... took 0.0006098747253417969 seconds
 ```
 
 #### resources

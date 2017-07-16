@@ -43,7 +43,7 @@ def seedData(cursor, rows):
 
   # seed posts data
   execute_values(cursor, "INSERT INTO posts (title, content) VALUES %s", posts_data)
-  print("seeding %s rows of faker data took %s\n" % (rows, time_util.getTime(start_time, time.time())))
+  print("seeding %s rows of faker data\n... took %s seconds\n" % (rows, time_util.getTime(start_time, time.time())))
 
 
 def updateData(cursor, data):
@@ -68,4 +68,4 @@ def indexData(cursor, rows):
     CREATE INDEX idx_fts_search ON search_index USING gin(document);
   """)
 
-  print("indexing %s rows took %s\n" % (rows, time_util.getTime(start_time, time.time())))
+  print("indexing %s rows\n... took %s seconds\n" % (rows, time_util.getTime(start_time, time.time())))
