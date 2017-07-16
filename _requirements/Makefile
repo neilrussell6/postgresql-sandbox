@@ -1,5 +1,3 @@
-.PHONY: all check clean
-
 # a list of all .in files
 objects = $(wildcard *.in)
 
