@@ -11,7 +11,7 @@ Postgres full text search
  * indexes title, content columns
  * searches using provided query
 
-#### Usasge
+### usage
 
 Running this command:
 
@@ -44,6 +44,6 @@ found 2 matches
 ... took 0.0006098747253417969 seconds
 ```
 
-#### resources
+### resources
 
  * [postgres-full-text-search-is-good-enough](http://rachbelaid.com/postgres-full-text-search-is-good-enough/)
